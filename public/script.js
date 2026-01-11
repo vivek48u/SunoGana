@@ -69,5 +69,6 @@ document.querySelector(".seekbar").addEventListener("click", e => {
   currentSong.currentTime = percent * currentSong.duration;
 });
 
+console.log("Songs array:", songs);
 renderSongs();
 playMusic(0, true);
