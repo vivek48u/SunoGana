@@ -15,3 +15,5 @@ const songs = [
     url: "https://res.cloudinary.com/dnkyg3yy3/video/upload/v1768144513/Chaand_Taare-64kbps_gm0xdd.mp3"
   }
 ];
+
+console.log("Songs loaded:", songs);
