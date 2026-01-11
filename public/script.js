@@ -36,6 +36,9 @@ function playMusic(index, pause = false) {
   }
 
   document.querySelector(".songinfo").innerText = songs[index].name;
+  document.querySelectorAll(".songlist li").forEach(li => li.classList.remove("active"));
+document.querySelectorAll(".songlist li")[index].classList.add("active");
+
 }
 
 play.addEventListener("click", () => {
@@ -54,6 +57,12 @@ previous.addEventListener("click", () => {
 
 next.addEventListener("click", () => {
   if (currentIndex < songs.length - 1) playMusic(currentIndex + 1);
+});
+
+currentSong.addEventListener("ended", () => {
+  if (currentIndex < songs.length - 1) {
+    playMusic(currentIndex + 1);
+  }
 });
 
 currentSong.addEventListener("timeupdate", () => {
