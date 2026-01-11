@@ -287,6 +287,10 @@
 .close{
     display: none;
 }
+.songlist li.active {
+  background: #1db954;
+  color: black;
+}
 
 @media (max-width:1200px) {
     .body{
@@ -359,6 +363,7 @@
         gap:13px;
     }
 }
+
 @media(max-width:400){
     .card{
         width:84vw;
