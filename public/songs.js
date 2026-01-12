@@ -34,10 +34,6 @@ const playlists = {
       {
         name: "Marathi Song 1",
         artist: "Marathi",
-<<<<<<< HEAD
-
-=======
->>>>>>> 1148bd6e43abbf584e77cdd48c3f94d2f41c2ea0
         url: "https://res.cloudinary.com/dnkyg3yy3/video/upload/v1768147636/Kaali_Bindi_gppblz.mp3"
       }
     ]
@@ -51,10 +47,6 @@ const playlists = {
       {
         name: "Motivation Song 1",
         artist: "Motivational",
-<<<<<<< HEAD
-
-=======
->>>>>>> 1148bd6e43abbf584e77cdd48c3f94d2f41c2ea0
         url: "https://res.cloudinary.com/dnkyg3yy3/video/upload/v1768149355/Jeetenge-128kbps_begtjh.mp3"
       }
     ]
@@ -68,13 +60,8 @@ const playlists = {
       {
         name: "NCS Song 1",
         artist: "NCS",
-<<<<<<< HEAD
 
         url: "https://res.cloudinary.com/dnkyg3yy3/video/upload/v1768149397/Ram_Siya_Ram_From_Adipurush_dxu5il.mp3"
-
-=======
-        url: "https://res.cloudinary.com/dnkyg3yy3/video/upload/v1768149397/Ram_Siya_Ram_From_Adipurush_dxu5il.mp3"
->>>>>>> 1148bd6e43abbf584e77cdd48c3f94d2f41c2ea0
       }
     ]
   },
@@ -87,13 +74,7 @@ const playlists = {
       {
         name: "Old Song 1",
         artist: "Old Hits",
-<<<<<<< HEAD
-
         url: "https://res.cloudinary.com/dnkyg3yy3/video/upload/v1768149462/Ham_Tere_Pyar_Mein_PagaiWorld.com_gy3you.mp3"
-
-=======
-        url: "https://res.cloudinary.com/dnkyg3yy3/video/upload/v1768149462/Ham_Tere_Pyar_Mein_PagaiWorld.com_gy3you.mp3"
->>>>>>> 1148bd6e43abbf584e77cdd48c3f94d2f41c2ea0
       }
     ]
   },
@@ -126,9 +107,6 @@ const playlists = {
 
 };
 
-<<<<<<< HEAD
-=======
 
->>>>>>> 1148bd6e43abbf584e77cdd48c3f94d2f41c2ea0
 console.log("Playlists loaded:", Object.keys(playlists));
 
