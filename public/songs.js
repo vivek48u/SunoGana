@@ -21,11 +21,7 @@ const playlists = {
       {
         name: "Bollywood Song 1",
         artist: "Bollywood",
-<<<<<<< HEAD
         url: "https://res.cloudinary.com/dnkyg3yy3/video/upload/v1768144514/Dhurandhar_Title_Track-64kbps_l1d6xf.mp3"
-=======
-        url: "https://res.cloudinary.com/YOUR_CLOUD_NAME/video/upload/bollywood1.mp3"
->>>>>>> 750c8603d518b1574de3a14f24f49d806e065100
       }
     ]
   },
@@ -38,11 +34,8 @@ const playlists = {
       {
         name: "Marathi Song 1",
         artist: "Marathi",
-<<<<<<< HEAD
+
         url: "https://res.cloudinary.com/dnkyg3yy3/video/upload/v1768147636/Kaali_Bindi_gppblz.mp3"
-=======
-        url: "https://res.cloudinary.com/YOUR_CLOUD_NAME/video/upload/marathi1.mp3"
->>>>>>> 750c8603d518b1574de3a14f24f49d806e065100
       }
     ]
   },
@@ -55,11 +48,8 @@ const playlists = {
       {
         name: "Motivation Song 1",
         artist: "Motivational",
-<<<<<<< HEAD
+
         url: "https://res.cloudinary.com/dnkyg3yy3/video/upload/v1768149355/Jeetenge-128kbps_begtjh.mp3"
-=======
-        url: "https://res.cloudinary.com/YOUR_CLOUD_NAME/video/upload/motivation1.mp3"
->>>>>>> 750c8603d518b1574de3a14f24f49d806e065100
       }
     ]
   },
@@ -72,11 +62,9 @@ const playlists = {
       {
         name: "NCS Song 1",
         artist: "NCS",
-<<<<<<< HEAD
+
         url: "https://res.cloudinary.com/dnkyg3yy3/video/upload/v1768149397/Ram_Siya_Ram_From_Adipurush_dxu5il.mp3"
-=======
-        url: "https://res.cloudinary.com/YOUR_CLOUD_NAME/video/upload/ncs1.mp3"
->>>>>>> 750c8603d518b1574de3a14f24f49d806e065100
+
       }
     ]
   },
@@ -89,11 +77,9 @@ const playlists = {
       {
         name: "Old Song 1",
         artist: "Old Hits",
-<<<<<<< HEAD
+
         url: "https://res.cloudinary.com/dnkyg3yy3/video/upload/v1768149462/Ham_Tere_Pyar_Mein_PagaiWorld.com_gy3you.mp3"
-=======
-        url: "https://res.cloudinary.com/YOUR_CLOUD_NAME/video/upload/old1.mp3"
->>>>>>> 750c8603d518b1574de3a14f24f49d806e065100
+
       }
     ]
   },
@@ -106,11 +92,7 @@ const playlists = {
       {
         name: "Punjabi Song 1",
         artist: "Punjabi",
-<<<<<<< HEAD
         url: "https://res.cloudinary.com/dnkyg3yy3/video/upload/v1768149555/Haseen_PagaiWorld.com_jttxih.mp3"
-=======
-        url: "https://res.cloudinary.com/YOUR_CLOUD_NAME/video/upload/punjabi1.mp3"
->>>>>>> 750c8603d518b1574de3a14f24f49d806e065100
       }
     ]
   },
@@ -123,19 +105,12 @@ const playlists = {
       {
         name: "Romantic Song 1",
         artist: "Romantic",
-<<<<<<< HEAD
         url: "https://res.cloudinary.com/dnkyg3yy3/video/upload/v1768149544/Vaara_Re-128kbps_dmj1hd.mp3"
-=======
-        url: "https://res.cloudinary.com/YOUR_CLOUD_NAME/video/upload/romantic1.mp3"
->>>>>>> 750c8603d518b1574de3a14f24f49d806e065100
       }
     ]
   }
 
 };
 
-<<<<<<< HEAD
 console.log("Playlists loaded:", Object.keys(playlists));
-=======
-console.log("Playlists loaded:", Object.keys(playlists));
->>>>>>> 750c8603d518b1574de3a14f24f49d806e065100
+
