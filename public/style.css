@@ -297,6 +297,307 @@
 .cardcontainer{
     position:static;
 }
+/* ================= MOBILE RESPONSIVE ================= */
+@media (max-width: 768px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Sidebar */
+  .left {
+    position: fixed;
+    left: -120%;
+    top: 0;
+    width: 80vw;
+    height: 100vh;
+    background-color: black;
+    z-index: 1000;
+    transition: left 0.3s ease;
+    padding: 10px;
+  }
+
+  .left.active {
+    left: 0;
+  }
+
+  /* Right Section */
+  .right {
+    width: 100vw;
+    margin: 0;
+  }
+
+  /* Header */
+  .header {
+    padding: 10px;
+  }
+
+  /* Hamburger */
+  .hamburger {
+    display: block;
+  }
+
+  .close {
+    display: block;
+  }
+
+  /* Playlist Cards */
+  .cardcontainer {
+    justify-content: center;
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+
+  .card {
+    width: 90vw;
+  }
+
+  /* Song List */
+  .songlist {
+    height: auto;
+    max-height: 50vh;
+    overflow-y: auto;
+  }
+
+  .songlist ul li {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .songlist .info {
+    width: 100%;
+    text-align: center;
+  }
+
+  /* Playbar */
+  .playbar {
+    width: calc(100vw - 24px);
+    left: 12px;
+    bottom: 10px;
+    padding: 10px;
+  }
+
+  .abovebar {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .songsbtns {
+    gap: 20px;
+  }
+
+  .songinfo,
+  .songtime {
+    width: auto;
+    text-align: center;
+  }
+
+  .timevol {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .seekbar {
+    width: calc(100% - 20px);
+  }
+}
+@media (max-width: 480px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .left {
+    position: fixed;
+    left: -120%;
+    top: 0;
+    width: 85vw;
+    height: 100vh;
+    z-index: 1000;
+    background: black;
+    transition: left 0.3s ease;
+  }
+
+  .right {
+    width: 100vw;
+  }
+
+  .card {
+    width: 92vw;
+  }
+
+  .playbar {
+    width: calc(100vw - 20px);
+    bottom: 8px;
+    left: 10px;
+    padding: 8px;
+  }
+
+  .songlist ul li {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .songinfo,
+  .songtime {
+    text-align: center;
+    width: auto;
+  }
+
+  .timevol {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .seekbar {
+    width: calc(100% - 20px);
+  }
+}
+@media (min-width: 481px) and (max-width: 768px) {
+
+  .left {
+    position: fixed;
+    left: -120%;
+    width: 70vw;
+    height: 100vh;
+    z-index: 1000;
+  }
+
+  .right {
+    width: 100vw;
+  }
+
+  .card {
+    width: 80vw;
+  }
+
+  .cardcontainer {
+    justify-content: center;
+  }
+
+  .playbar {
+    width: calc(100vw - 32px);
+    bottom: 12px;
+  }
+
+  .abovebar {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .timevol {
+    flex-direction: column;
+  }
+}
+@media (max-width: 400px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  /* Sidebar */
+  .left {
+    width: 90vw;
+    padding: 8px;
+  }
+
+  /* Right section */
+  .right {
+    width: 100vw;
+  }
+
+  /* Header buttons */
+  .buttons {
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+
+  .signup,
+  .login {
+    font-size: 14px;
+    padding: 6px 10px;
+  }
+
+  /* Cards */
+  .card {
+    width: 94vw;
+    padding: 8px;
+  }
+
+  .card h2 {
+    font-size: 16px;
+  }
+
+  .card p {
+    font-size: 12px;
+  }
+
+  /* Play button on card */
+  .play {
+    width: 26px;
+    height: 26px;
+    top: auto;
+    bottom: 12px;
+    right: 12px;
+  }
+
+  /* Song list */
+  .songlist ul li {
+    font-size: 12px;
+    padding: 10px;
+  }
+
+  .songlist .info {
+    width: 100%;
+    text-align: center;
+  }
+
+  .playnow span {
+    font-size: 12px;
+  }
+
+  /* Playbar */
+  .playbar {
+    width: calc(100vw - 16px);
+    bottom: 6px;
+    padding: 8px;
+  }
+
+  .abovebar {
+    gap: 8px;
+  }
+
+  .songsbtns img {
+    width: 22px;
+  }
+
+  .songinfo,
+  .songtime {
+    font-size: 12px;
+    text-align: center;
+  }
+
+  /* Seekbar */
+  .seekbar {
+    width: calc(100% - 16px);
+    height: 3px;
+  }
+
+  .circle {
+    width: 11px;
+    height: 11px;
+  }
+
+  /* Volume */
+  .volume img {
+    width: 20px;
+  }
+
+  .range input {
+    width: 70px;
+  }
+}
 
 @media (max-width:1200px) {
     *{
