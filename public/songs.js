@@ -112,7 +112,7 @@ const playlists = {
       {
         name: "Brothers_Anthem",
         artist: "Motivational",
-        url: "https://res.cloudinary.com/dnkyg3yy3/video/upload/v1768207973/Brothers_Anthem-320kbps_p1qyow.mp33"
+        url: "https://res.cloudinary.com/dnkyg3yy3/video/upload/v1768207973/Brothers_Anthem-320kbps_p1qyow.mp3"
       },
        {
         name: "Mann_Mein_Shiva",
