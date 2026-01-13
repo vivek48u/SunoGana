@@ -5,11 +5,7 @@ const playlists = {
     description: "Ahirani Collection",
     cover: "img/ahirani.jpg",
     songs: [
-      {
-        name: "Ahirani Song 1",
-        artist: "Ahirani",
-        url: "https://res.cloudinary.com/YOUR_CLOUD_NAME/video/upload/ahirani1.mp3"
-      }
+      
     ]
   },
 
@@ -112,7 +108,7 @@ const playlists = {
       {
         name: "Brothers_Anthem",
         artist: "Motivational",
-        url: "https://res.cloudinary.com/dnkyg3yy3/video/upload/v1768207973/Brothers_Anthem-320kbps_p1qyow.mp3"
+        url: "https://res.cloudinary.com/dnkyg3yy3/video/upload/v1768207973/Brothers_Anthem-320kbps_p1qyow.mp33"
       },
        {
         name: "Mann_Mein_Shiva",
@@ -235,9 +231,19 @@ const playlists = {
     cover: "img/punjabi.jpg",
     songs: [
       {
-        name: "Punjabi Song 1",
+        name: "Haseen_PagaiWorld",
         artist: "Punjabi",
         url: "https://res.cloudinary.com/dnkyg3yy3/video/upload/v1768149555/Haseen_PagaiWorld.com_jttxih.mp3"
+      },
+      {
+        name: "Thodi_Si_Daaru_PagaiWorld",
+        artist: "Punjabi",
+        url: "https://res.cloudinary.com/dnkyg3yy3/video/upload/v1768271640/Thodi_Si_Daaru_PagaiWorld.com_siotf5.mp3"
+      },
+      {
+        name: "Boyfriend -Punjabi Song",
+        artist: "Punjabi",
+        url: "https://res.cloudinary.com/dnkyg3yy3/video/upload/v1768271645/Boyfriend_320_PagaiWorld.com_irj3dt.mp3"
       }
     ]
   },
@@ -248,7 +254,7 @@ const playlists = {
     cover: "img/romantic.jpg",
     songs: [
       {
-        name: "Romantic Song 1",
+        name: "Vaara_Re",
         artist: "Romantic",
         url: "https://res.cloudinary.com/dnkyg3yy3/video/upload/v1768149544/Vaara_Re-128kbps_dmj1hd.mp3"
       }
