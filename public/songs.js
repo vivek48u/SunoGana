@@ -137,7 +137,7 @@ const playlists = {
   ncs: {
     title: "Devetional Songs",
     description: "Bhakti geet/Bhajan",
-    cover: "img/ncs.jpg",
+    cover: "img/ganpati.jpg",
     songs: [
       {
         name: "Ya-Re-Ya-Sare-Ya",
