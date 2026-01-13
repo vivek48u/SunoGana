@@ -1,8 +1,10 @@
 console.log("Spotify Clone - Playlist Version");
 
+/* ---------------- GLOBAL VARIABLES ---------------- */
 let currentSong = new Audio();
 let songs = [];
 let currentIndex = 0;
+let lastVolume = 0.5;
 
 /* ---------------- TIME FORMAT ---------------- */
 function secondsToMinutesSeconds(seconds) {
@@ -14,10 +16,13 @@ function secondsToMinutesSeconds(seconds) {
     return `${String(minutes).padStart(2, "0")}:${String(remainingSeconds).padStart(2, "0")}`;
 }
 
-/* ---------------- LOAD PLAYLIST (FOLDER STYLE) ---------------- */
+/* ---------------- LOAD PLAYLIST ---------------- */
 function loadPlaylist(key) {
     const playlist = playlists[key];
-    if (!playlist) return;
+    if (!playlist || !playlist.songs || playlist.songs.length === 0) {
+        console.error("Playlist not found or empty");
+        return;
+    }
 
     songs = playlist.songs;
     currentIndex = 0;
@@ -42,22 +47,26 @@ function loadPlaylist(key) {
 
     Array.from(songUL.children).forEach(li => {
         li.addEventListener("click", () => {
-            const index = parseInt(li.dataset.index);
-            playMusic(index);
+            playMusic(parseInt(li.dataset.index));
         });
     });
 
-    playMusic(0, true);
+    // 🔥 IMPORTANT CHANGE
+    playMusic(0); // first song AUTO PLAY
 }
+
 
 /* ---------------- PLAY MUSIC ---------------- */
 function playMusic(index, pause = false) {
     currentIndex = index;
     currentSong.src = songs[index].url;
+    currentSong.load();
 
     if (!pause) {
         currentSong.play();
         play.src = "img/pause.svg";
+    } else {
+        play.src = "img/play.svg";
     }
 
     document.querySelector(".songinfo").innerText = songs[index].name;
@@ -70,10 +79,10 @@ function playMusic(index, pause = false) {
 /* ---------------- MAIN ---------------- */
 function main() {
 
-    // Load default playlist (change key if needed)
+    /* DEFAULT PLAYLIST */
     loadPlaylist("ncs");
 
-    /* Play / Pause */
+    /* PLAY / PAUSE */
     play.addEventListener("click", () => {
         if (currentSong.paused) {
             currentSong.play();
@@ -84,61 +93,66 @@ function main() {
         }
     });
 
-    /* Time Update */
+    /* TIME UPDATE */
     currentSong.addEventListener("timeupdate", () => {
-        document.querySelector(".songtime").innerText =
-            `${secondsToMinutesSeconds(currentSong.currentTime)} / ${secondsToMinutesSeconds(currentSong.duration)}`;
+        if (!isNaN(currentSong.duration)) {
+            document.querySelector(".songtime").innerText =
+                `${secondsToMinutesSeconds(currentSong.currentTime)} / ${secondsToMinutesSeconds(currentSong.duration)}`;
 
-        document.querySelector(".circle").style.left =
-            (currentSong.currentTime / currentSong.duration) * 100 + "%";
+            document.querySelector(".circle").style.left =
+                (currentSong.currentTime / currentSong.duration) * 100 + "%";
+        }
     });
 
-    /* Auto play next */
+    /* AUTO NEXT */
     currentSong.addEventListener("ended", () => {
         if (currentIndex < songs.length - 1) {
             playMusic(currentIndex + 1);
         }
     });
 
-    /* Seekbar */
+    /* SEEK BAR */
     document.querySelector(".seekbar").addEventListener("click", (e) => {
-        const percent = e.offsetX / e.target.getBoundingClientRect().width;
+        const seekbar = e.currentTarget;
+        const percent = e.offsetX / seekbar.offsetWidth;
         currentSong.currentTime = percent * currentSong.duration;
     });
 
-    /* Previous */
+    /* PREVIOUS */
     previous.addEventListener("click", () => {
         if (currentIndex > 0) {
             playMusic(currentIndex - 1);
         }
     });
 
-    /* Next */
+    /* NEXT */
     next.addEventListener("click", () => {
         if (currentIndex < songs.length - 1) {
             playMusic(currentIndex + 1);
         }
     });
 
-    /* Volume */
-    document.querySelector(".range input").addEventListener("change", (e) => {
+    /* VOLUME */
+    document.querySelector(".range input").addEventListener("input", (e) => {
         currentSong.volume = e.target.value / 100;
+        lastVolume = currentSong.volume;
     });
 
-    /* Mute */
+    /* MUTE / UNMUTE */
     document.querySelector(".volume img").addEventListener("click", (e) => {
         if (currentSong.volume > 0) {
+            lastVolume = currentSong.volume;
             currentSong.volume = 0;
             e.target.src = "img/mute.svg";
             document.querySelector(".range input").value = 0;
         } else {
-            currentSong.volume = 0.1;
+            currentSong.volume = lastVolume || 0.5;
             e.target.src = "img/volume.svg";
-            document.querySelector(".range input").value = 10;
+            document.querySelector(".range input").value = currentSong.volume * 100;
         }
     });
 
-    /* Mobile Menu */
+    /* MOBILE MENU */
     document.querySelector(".hamburger").addEventListener("click", () => {
         document.querySelector(".left").style.left = "0";
     });
@@ -148,6 +162,4 @@ function main() {
     });
 }
 
-
 main();
-
